@@ -1,2 +1,9 @@
 # 2016 
-# This is a test project
+# Project
+#     |-node_modules      // npm上的第三方资源
+#     |-src
+#         |-Components    // 存放自己实现的组件
+#         |-Filters       // 存放自己实现的filter
+#         |-Directives    // 存放自己实现的directives
+#         |-Static        // 存放非组件资源
+#         |-lib           // 存放不在npm上的第三方资源
