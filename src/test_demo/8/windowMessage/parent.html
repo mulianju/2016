@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <title>parent</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0
+        }
+        body{
+            background-color:#eee
+        }
+    </style>
+</head>
+
+<body>
+    <iframe style="background-color:#fff;margin:50px 10%" border="0" src="child.html" width="80%" height="500"></iframe>
+    <p id="text-viewer"></p>
+    <script>
+        var viewer = document.getElementById('text-viewer');
+        window.addEventListener('message',function(e){
+            console.log(e.data)
+            viewer && e.data && e.data.text_message && (viewer.innerText = e.data.text_message);
+        });
+    </script>
+</body>
+
+</html>

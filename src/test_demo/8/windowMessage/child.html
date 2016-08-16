@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <title>child</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <input type="text" name="text" id="textbox">
+        <input type="button" value="post">
+        <script>
+            var button = document.querySelector('[type="button"]'),
+                textbox = document.getElementById('textbox');
+
+            button.addEventListener('click',function(){
+                window.parent.postMessage({
+                    text_message:textbox.value
+                },'*')
+            });
+        </script>
+    </body>
+</html>
