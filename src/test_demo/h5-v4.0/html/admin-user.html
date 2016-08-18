@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理后台--用户管理</title>
+	<link rel="stylesheet" href="http://icon.zol-img.com.cn/bootstrap/bootstrap-3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div id="main-content">
+	<h2>添加管理账户</h2>
+	<form class="form-horizontal">
+	  <div class="control-group">
+	    <label class="control-label" for="username">姓名</label>
+	    <div class="controls">	    	
+	      <input type="text" id="username" placeholder="姓名">
+	    </div>
+	  </div>
+
+	  <div class="control-group">
+	    <label class="control-label" for="email">邮箱</label>
+	    <div class="controls">
+	      <input type="text" id="email" placeholder="邮箱">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label" for="modeltypes">管理类型</label>
+	    <div class="controls">
+	      <select name="modeltypes" id="modeltypes">
+	      	<option value="1">活动报名</option>
+	      	<option value="2">邀请函</option>
+	      	<option value="3">新品推广</option>
+	      	<option value="4">活动总结</option>
+	      </select>
+	      <button type="button" class="btn btn-info">+ 添加分类</button>
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <div class="controls">
+	      <button type="submit" class="btn btn-primary" style="  width: 100px;">保存</button>
+	    </div>
+	  </div>
+	</form>
+
+	<h2>管理账户列表</h2>
+	
+	<table class="table">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>姓名</th>
+          <th>账号</th>
+          <th>管理类型</th>
+          <th>添加时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>abc@zol.com.cn</td>
+          <td>普通管理员</td>
+          <td>2015-12-01</td>
+          <td><a href="">删除</a></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>abc@zol.com.cn</td>
+          <td>普通管理员</td>
+          <td>2015-12-01</td>
+          <td><a href="">删除</a></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>abc@zol.com.cn</td>
+          <td>普通管理员</td>
+          <td>2015-12-01</td>
+          <td><a href="">删除</a></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>abc@zol.com.cn</td>
+          <td>普通管理员</td>
+          <td>2015-12-01</td>
+          <td><a href="">删除</a></td>
+        </tr>
+      </tbody>
+    </table>
+	<nav>
+	  <ul class="pagination">
+	    <li>
+	      <a href="#" aria-label="Previous">
+	        <span aria-hidden="true">&laquo;</span>
+	      </a>
+	    </li>
+	    <li><a href="#">1</a></li>
+	    <li><a href="#">2</a></li>
+	    <li><a href="#">3</a></li>
+	    <li><a href="#">4</a></li>
+	    <li><a href="#">5</a></li>
+	    <li>
+	      <a href="#" aria-label="Next">
+	        <span aria-hidden="true">&raquo;</span>
+	      </a>
+	    </li>
+	  </ul>
+	</nav>
+</div>
+</body>
+</html>

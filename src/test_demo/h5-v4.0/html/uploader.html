@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>upload</title>
+</head>
+<body>
+	<form style="display:none;" action="/H5-API/AjaxFiles.php?action=uploadMyFiles&bigType=bgType" enctype="multipart/form-data" method="post">
+        <input type="file" name="attach[]" accept=".png,.gif,.jpg">
+    </form>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+	<script>
+   		$('[type="file"]').on('change',function(){
+   			$('form').trigger('submit');
+   		});
+
+	</script>
+</body>
+</html>

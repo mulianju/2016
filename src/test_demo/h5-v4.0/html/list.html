@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>H5页面制作工具</title>
+	<link rel="stylesheet" href="../css/main.css">
+	<link rel="stylesheet" href="../css/hint.min.css">
+
+<script src="http://icon.zol-img.com.cn/js/jquery-1.9.1.min.js"></script>
+
+</head>
+<body>
+<div class="header">
+	<div class="wrapper clearfix">
+		<div class="login-info"><span class="iconfont">&#xe61d;</span> 管理员 <i>liying</i> 您好 <a href="" class="btn">退出</a></div>
+		<img src="../images/logo1.png" alt="">
+	</div>
+</div>
+
+<div class="wrapper">
+	<p class="create-add"><span class="iconfont">&#xe60d;</span> 新建项目</p>
+	<div id="create-li" class="float-up clearfix">
+		<form id="create-app" action="ajax/zapp.php/create" method="post" enctype="multipart/form-data">	
+			<input type="hidden" name="id" value="0">		
+			<div class="upload" id="upload-icon">
+				<input type="file" name="icon" accept=".png,.gif,.jpg" id="app-icon">
+				<div class="img" id="app-icon-preview"></div>
+				<span class="iconfont">&#xe60d;</span>300*300上传分享图片
+			</div>
+			<div class="app-detail">
+				<input type="text" id="app-title" name="title" placeholder="标题(专题标题，不超过10字)" required="">
+				<textarea id="app-description" rows="2" name="description" required="" placeholder="描述（用于在微信分享时描述该专题，不超过30字）"></textarea>
+				<span class="btn"><span class="iconfont">&#xe611;</span> 保存</span><span class="btn"><span class="iconfont">&#xe61c;</span> 取消</span>
+			</div>
+		</form>
+	</div>
+	<ul class="app-lists clearfix">
+		<li>
+			<div class="pic"><img src="http://m.fd.zol-img.com.cn/g5/M00/00/0B/ChMkJlZqo1SIWTdBAAzodQCbVVcAAGCKwN0AbwADOiN227.jpg" alt="" width="150" height="150"><span class="pic-info">未发布</span></div>
+			<div class="app-detail">
+				<h3 contenteditable="true">OPPO R7新品发布会</h3>
+				<p contenteditable="true" class="txt">OPPO R9 Plus前后1600万像素摄像头，极致美颜4.0，自拍美得很自然，全金属机身!</p>
+				<p class="sets">
+					<a href=""><span class="iconfont">&#xe613;</span> 预览</a>
+					<a href=""><span class="iconfont">&#xe624;</span> 编辑</a>
+					<a href=""><span class="iconfont">&#xe622;</span> 详情</a>
+					<a href=""><span class="iconfont">&#xe626;</span> 发布</a>
+					<a href=""><span class="iconfont">&#xe61f;</span> 删除</a>
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="pic"><img src="http://m.fd.zol-img.com.cn/g5/M00/00/0B/ChMkJlZqo1SIWTdBAAzodQCbVVcAAGCKwN0AbwADOiN227.jpg" alt="" width="150" height="150"><span class="pic-info">未发布</span></div>
+			<div class="app-detail">
+				<h3 contenteditable="true">OPPO R7新品发布会</h3>
+				<p contenteditable="true" class="txt">OPPO R9 Plus前后1600万像素摄像头，极致美颜4.0，自拍美得很自然，全金属机身!</p>
+				<p class="sets">
+					<a href=""><span class="iconfont">&#xe613;</span> 预览</a>
+					<a href=""><span class="iconfont">&#xe624;</span> 编辑</a>
+					<a href=""><span class="iconfont">&#xe622;</span> 详情</a>
+					<a href=""><span class="iconfont">&#xe626;</span> 发布</a>
+					<a href=""><span class="iconfont">&#xe61f;</span> 删除</a>
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="pic"><img src="http://m.fd.zol-img.com.cn/g5/M00/00/0B/ChMkJlZqo1SIWTdBAAzodQCbVVcAAGCKwN0AbwADOiN227.jpg" alt="" width="150" height="150"><span class="pic-info">未发布</span></div>
+			<div class="app-detail">
+				<h3 contenteditable="true">OPPO R7新品发布会</h3>
+				<p contenteditable="true" class="txt">OPPO R9 Plus前后1600万像素摄像头，极致美颜4.0，自拍美得很自然，全金属机身!</p>
+				<p class="sets">
+					<a href=""><span class="iconfont">&#xe613;</span> 预览</a>
+					<a href=""><span class="iconfont">&#xe624;</span> 编辑</a>
+					<a href=""><span class="iconfont">&#xe622;</span> 详情</a>
+					<a href=""><span class="iconfont">&#xe626;</span> 发布</a>
+					<a href=""><span class="iconfont">&#xe61f;</span> 删除</a>
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="pic"><img src="http://m.fd.zol-img.com.cn/g5/M00/00/0B/ChMkJlZqo1SIWTdBAAzodQCbVVcAAGCKwN0AbwADOiN227.jpg" alt="" width="150" height="150"><span class="pic-info">未发布</span></div>
+			<div class="app-detail">
+				<h3 contenteditable="true">OPPO R7新品发布会</h3>
+				<p contenteditable="true" class="txt">OPPO R9 Plus前后1600万像素摄像头，极致美颜4.0，自拍美得很自然，全金属机身!</p>
+				<p class="sets">
+					<a href=""><span class="iconfont">&#xe613;</span> 预览</a>
+					<a href=""><span class="iconfont">&#xe624;</span> 编辑</a>
+					<a href=""><span class="iconfont">&#xe622;</span> 详情</a>
+					<a href=""><span class="iconfont">&#xe626;</span> 发布</a>
+					<a href=""><span class="iconfont">&#xe61f;</span> 删除</a>
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="pic"><img src="http://m.fd.zol-img.com.cn/g5/M00/00/0B/ChMkJlZqo1SIWTdBAAzodQCbVVcAAGCKwN0AbwADOiN227.jpg" alt="" width="150" height="150"><span class="pic-info">未发布</span></div>
+			<div class="app-detail">
+				<h3 contenteditable="true">OPPO R7新品发布会</h3>
+				<p contenteditable="true" class="txt">OPPO R9 Plus前后1600万像素摄像头，极致美颜4.0，自拍美得很自然，全金属机身!</p>
+				<p class="sets">
+					<a href=""><span class="iconfont">&#xe613;</span> 预览</a>
+					<a href=""><span class="iconfont">&#xe624;</span> 编辑</a>
+					<a href=""><span class="iconfont">&#xe622;</span> 详情</a>
+					<a href=""><span class="iconfont">&#xe626;</span> 发布</a>
+					<a href=""><span class="iconfont">&#xe61f;</span> 删除</a>
+				</p>
+			</div>
+		</li>
+		<li>
+			<div class="pic"><img src="http://m.fd.zol-img.com.cn/g5/M00/00/0B/ChMkJlZqo1SIWTdBAAzodQCbVVcAAGCKwN0AbwADOiN227.jpg" alt="" width="150" height="150"><span class="pic-info">未发布</span></div>
+			<div class="app-detail">
+				<h3 contenteditable="true">OPPO R7新品发布会</h3>
+				<p contenteditable="true" class="txt">OPPO R9 Plus前后1600万像素摄像头，极致美颜4.0，自拍美得很自然，全金属机身!</p>
+				<p class="sets">
+					<a href=""><span class="iconfont">&#xe613;</span> 预览</a>
+					<a href=""><span class="iconfont">&#xe624;</span> 编辑</a>
+					<a href=""><span class="iconfont">&#xe622;</span> 详情</a>
+					<a href=""><span class="iconfont">&#xe626;</span> 发布</a>
+					<a href=""><span class="iconfont">&#xe61f;</span> 删除</a>
+				</p>
+			</div>
+		</li>
+	</ul>
+
+	<p class="pages">
+		<a href="" class="prev">&lt;</a><a href="">1</a><a href="">2</a><a class="now">3</a><a href="">4</a><a href=""> &gt; </a>
+	</p>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>H5页面制作工具</title>
+    <link rel="stylesheet" href="../css/app.css">
+    <link rel="stylesheet" href="../css/create.css">
+    <link rel="stylesheet" href="../css/hint.min.css">
+    <link rel="stylesheet" href="../css/animate.css">
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <h1>ZOL微营销</h1>
+            <div class="tools">
+                <span data-action="preview">预览</span>
+                <span data-action="publish">发布</span>
+                <span data-action="save">保存</span>
+                <a href="/H5-v4.0/html/list.php">退出</a>
+            </div>
+            <ul class="btns">
+                <li><span class="iconfont">&#xe60f;</span>文本</li>
+                <li edit-btn="elementMy"><span class="iconfont">&#xe60e;</span>图片</li>
+                <li edit-btn="materials"><span class="iconfont">&#xe621;</span>素材</li>
+                <li edit-btn="interactions"><span class="iconfont">&#xe623;</span>互动</li>
+                <li id="JS_components">
+                    <span class="iconfont">&#xe605;</span>组件
+                    <div class="menu-more">
+                        <a class="pic-slide" href="javascript:;">图组</a>
+                        <!-- <a href="javascript:;">表单</a> -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="slides">
+            <ul class="tablist JS_tab">
+                <li>整套模板</li>
+                <li>单页模板</li>
+                <li class="on">当前专题</li>
+            </ul>
+            <div class="slides-con JS_con">
+                <ul class="slide-moddles-list niceScroll"></ul>
+                <ul class="slide-moddles-list niceScroll"></ul>
+                <div class="slidelist on">
+                    <ul class="niceScroll pa" id="slidelist"></ul>
+                    <div class="slide-add" data-todo="add">+</div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="warning"><span class="iconfont">&#xe619;</span>超出屏幕范围</div>
+            <div class="main">
+                <iframe id="phone-shell" src="generator.html" width="320" height="504" frameborder="0" scrolling="no"></iframe>
+                <div class="settings">
+                    <a href="javascript:;" data-hint="背景" class="hint--right"><span class="iconfont">&#xe600;</span></a>
+                    <!-- <a href="javascript:;" data-todo="revoke" data-hint="撤销" class="true hint--right"><span class="iconfont">&#xe601;</span></a> -->
+                    <!-- <a href="javascript:;" data-todo="recover" data-hint="恢复" class="hint--right"><span class="iconfont">&#xe618;</span></a> -->
+                    <a href="javascript:;" data-todo="view" data-hint="预览" class="hint--right"><span class="iconfont">&#xe613;</span></a>
+                    <!-- <a href="javascript:;" data-todo="lock" data-hint="锁定" class="hint--right"><span class="iconfont">&#xe60c;</span></a> -->
+                    <a href="javascript:;" data-todo="copy" data-hint="复制" class="hint--right"><span class="iconfont">&#xe617;</span></a>
+                    <a href="javascript:;" data-todo="delete" data-hint="删除" class="hint--right"><span class="iconfont">&#xe61f;</span></a>
+                </div>
+            </div>
+        </div>
+        <div class="slide-settings">
+            <ul class="tablist JS_tab">
+                <li id="editorTitle" class="on">背景</li>
+                <li id="textEditor">样式</li>
+                <li id="isAnimationBtn">动画</li>
+            </ul>
+            <div class="slide-settings-container JS_con">
+                <div id="slide-background" class="on">
+                    <dl>
+                        <dt>背景</dt>
+                        <dd>
+                            <em>背景颜色：</em>
+                            <input type="hidden" name="color" value="" />
+                            <div class="color-box" id="slide-background-color" data-type="color"></div>
+                        </dd>
+                        <dd>
+                            <em>透明度：</em><input type="range" name="alpha" min="0" max="100" step="10" value="100" />
+                            <output name="alpha">100</output>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>图片</dt>
+                        <dd class="setting-bg"><div class="page"></div></dd>
+                        <dd class="setting-bg-icon">
+                            <label for="slide-background-image-none">
+                                <input type="radio" name="style" checked="checked" value="none" id="slide-background-image-none" />
+                                <span class="iconfont">&#xe620;</span>
+                                <span>无</span>
+                            </label>
+                            <label for="slide-background-style-center">
+                                <input type="radio" name="style" value="center" id="slide-background-style-center" />
+                                <span class="iconfont">&#xe602;</span>
+                                <span>居中</span>
+                            </label>
+                            <label for="slide-background-style-cover">
+                                <input type="radio" name="style" value="cover" id="slide-background-style-cover" />
+                                <span class="iconfont">&#xe60b;</span>
+                                <span>铺满</span>
+                            </label>
+                            <label for="slide-background-repeat">
+                                <input type="radio" name="style" value="repeat" id="slide-background-repeat" />
+                                <span class="iconfont">&#xe60a;</span>
+                                <span>平铺</span>
+                            </label>
+                        </dd>
+                        <dd>
+                            <em>透明度：</em><input type="range" name="alpha" min="0" max="100" step="10" value="100" />
+                            <output name="alpha">100</output>
+                        </dd>
+
+                    </dl>
+                </div>
+                <div id="slide-text">
+                    <dl>
+                        <dt>文本</dt>
+                        <dd>
+                            <input type="number" name="size" value="15" min="10" max="120" step="2" list="text-font-size-list" /> px&nbsp;&nbsp;&nbsp;&nbsp;
+                            <datalist id="text-font-size-list">
+                                <option value="10" />
+                                <option value="12" />
+                                <option value="14" />
+                                <option value="15" />
+                                <option value="16" />
+                                <option value="17" />
+                                <option value="18" />
+                                <option value="20" />
+                                <option value="24" />
+                                <option value="32" />
+                                <option value="36" />
+                                <option value="48" />
+                                <option value="64" />
+                                <option value="72" />
+                                <option value="96" />
+                                <option value="120" />
+                            </datalist>
+
+                            <input type="number" name="lineheight" value="150" min="100" max="300" step="50" list="text-line-height-list" /> %
+                            <datalist id="text-line-height-list">
+                                <option value="100" />
+                                <option value="150" />
+                                <option value="200" />
+                                <option value="250" />
+                                <option value="300" />
+                            </datalist>
+                        </dd>
+                        <dd class="style-labels">
+                            <label title="加粗" for="text-font-bold"><input type="checkbox" name="font-weight" value="700" id="text-font-bold" /><b>B</b></label>
+                            <label title="斜体" for="text-font-italic"><input type="checkbox" name="font-style" value="italic" id="text-font-italic" /><i>I</i></label>
+                            <label title="下划线" for="text-font-underline"><input type="checkbox" name="text-decoration" value="underline" id="text-font-underline" /><u>U</u></label>
+                            <span id="font-color">
+                                <input type="hidden" name="color" />
+                                A<span class="color-box"></span>
+                            </span>
+                            <label title="左对齐" for="text-align-left" class="on"><input type="radio" name="text-align" value="left" id="text-align-left" /><span class="iconfont">&#xe606;</span></label>
+                            <label title="居中" for="text-align-center"><input type="radio" name="text-align" value="center" id="text-align-center" /><span class="iconfont">&#xe609;</span></label>
+                            <label title="右对齐" for="text-align-right"><input type="radio" name="text-align" value="right" id="text-align-right" /><span class="iconfont">&#xe604;</span></label>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>填充+边框</dt>
+                        <dd>
+                            <em>边框</em>
+                            <input type="hidden" name="bordercolor" value="" />
+                            <div class="color-box" id="slide-border-color" data-type="color"></div>
+                            <select name="borderstyle">
+                                <option value="">无</option>
+                                <option value="solid">实线</option>
+                                <option value="dashed">虚线</option>
+                                <option value="dotted">点状</option>
+                                <option value="double">双线</option>
+                            </select>
+                            <input type="number" name="bordersize" value="2"> px
+                        </dd>
+                        <dd>
+                            <em>圆角</em>
+                            <input type="range" name="radius" min="0" max="100" step="5" value="100" />
+                            <output name="radius">100px</output>
+                        </dd>
+                        <dd>
+                            <em>填充</em>
+                            <input type="hidden" name="bgcolor" value="" />
+                            <div class="color-box color-none" id="slide-textbg-color" data-type="color"></div>
+                        </dd>
+                        <dd>
+                            <em>透明度</em>
+                            <input type="range" name="background-alpha" min="0" max="100" step="5" value="100" />
+                            <output name="alpha">1</output>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>尺寸+位置</dt>
+                        <dd>
+                            <em>尺寸</em><input type="number" name="width" value="0" /> * <input type="number" name="height" value="0" />
+                        </dd>
+                        <dd>
+                            <em>位置</em><input type="number" name="x" value="0" /> * <input type="number" name="y" value="0" />
+                        </dd>
+                        <dd>
+                            <em>旋转</em>
+                            <input type="range" name="rotate" min="0" max="360" step="45" value="0" />
+                            <output name="rotate">0</output>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt>URL</dt>
+                        <dd>
+                            <input type="text" name="url" value="" placeholder="http://m.zol.com.cn/" />
+                        </dd>
+                    </dl>
+                </div>
+                <div id="slide-animate">
+                    <div class="btn item-add"><span class="iconfont">&#xe60d;</span> 添加动画</div>
+                    <div class="niceScroll">
+
+                    </div>
+                    <div class="btns">
+                        <span class="btn btn-red">清除所有</span>
+                        <!-- <span class="btn btn-green">确认</span> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 顶部菜单弹出框 -->
+    <div id="flexbg" class="toast">
+        <div class="elements">
+            <div class="elements-title">
+                <span class="close iconfont">&#xe61c;</span>
+                <strong>元素</strong> 双击使用元素，按住Ctrl可多选使用元素
+            </div>
+            <ul class="tablist">
+                <li data-for="#elementMy">我的</li>
+                <li data-for="#backgrounds" data-id="#backgrounds">背景图</li>
+                <li data-for="#materials" data-id="#materials">素材库</li>
+                <li data-for="#interactions">互动</li>
+            </ul>
+            <div class="container">
+                <div id="elementMy" class="on" data-action="myFiles">
+                    <p class="tab">支持格式：JPG、JPEG、PNG、GIF 大小：3M以内</p>
+                    <iframe id="uploader" src="uploader.html" frameborder="0" style="display:none;"></iframe>
+                    <ul class="cons"></ul>
+                    <div class="elements-footer">
+                        <div class="buttons">
+                            <span class="btn">使用图片</span>
+                            <span class="btn btn-green">设为背景</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="backgrounds" data-btype="bgType">
+                    <ul class="tab tags"></ul>
+                    <div class="file-container">
+                        <ul class="cons"></ul>
+                        <div class="elements-footer">
+                            <div class="buttons">
+                                <span class="btn">使用图片</span>
+                                <span class="btn btn-green">设为背景</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="materials" data-btype="tpType">
+                    <ul class="tab tags"></ul>
+                    <div class="file-container">
+                        <ul class="cons"></ul>
+                        <div class="elements-footer">
+                            <div class="buttons">
+                                <span class="btn">使用图片</span>
+                                <span class="btn btn-green">设为背景</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="interactions">
+                    <dl>
+                        <dt>按钮</dt>
+                        <dd><span class="icon-btn" data-control="submit">提交</span><span class="icon-btn" data-control="submit1">提交</span><span class="icon-btn" data-control="submit2">提交</span><span class="icon-btn" data-control="submit3">提交</span><span class="icon-btn" data-control="submit4">提交</span></dd>
+                    </dl>
+                    <dl>
+                        <dt>分享</dt>
+                        <dd><img src="../images/share1.png" alt="" data-control="share1"></dd>
+                        <dd><img src="../images/share.png" alt="" data-control="share"></dd>
+                        <dd><img src="../images/share2.png" alt="" data-control="share2"></dd>
+                    </dl>
+                    <dl>
+                        <dt>链接</dt>
+                        <dd>
+                            <span data-control="link" class="icon-btn">跳转链接</span>
+                            <p>放在需要添加链接的图片上</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 预览模板 -->
+    <div id="viewPop" class="toast">
+        <div class="main">
+            <div class="close iconfont">&#xe61c;</div>
+            <iframe src="http://m.zol.com.cn/topic/5753755.html" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="../js/sea.js"></script>
+    <script>
+        seajs.config({
+            base: "../js/",
+            alias: {
+                "jquery": "jquery/jquery/1.10.1/jquery.js"
+            }
+        });
+        var t = new Date();
+        seajs.use('../js/create.js');
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <style>
+        * { margin: 0; bottom: 0; font-family: 'Microsoft YaHei',Arial; }
+        html, body { width: 100%; height: 100%; }
+        body { background: url(http://h5x.zol.com.cn/H5-v4.0/images/preview_background.jpg) center top no-repeat; background-size: cover; min-width: 1000px; position: relative; }
+
+        .left { float: left !important; }
+        .right { float: right !important; }
+
+        .qr-code .buttons a::before, .frame-container > header .back::before, .frame-container > header .menu, body > header .back-to-list::before { background-image: url(http://h5x.zol.com.cn/H5-v4.0/images/preview_icon.png) !important; }
+
+        body > header { width: 1000px; margin: 0 auto; height: 70px; }
+        body > header > a { height: 70px; line-height: 70px; display: block; color: #fff; text-decoration: none; }
+        body > header .logo { width: 180px; background: url(../images/preview_logo.png) left center no-repeat; text-indent: -99em; overflow: hidden; }
+        body > header .back-to-list::before { content: ""; float: left; height: 70px; width: 20px; background-position: -37px 50%; background-repeat: no-repeat; }
+
+        #main { position: absolute; width: 615px; top: 50%; left: 50%; margin-top: -330px; margin-left: -307px; }
+        .frame-container { background: url(../images/mobile.png) no-repeat; width: 320px; height: 504px; padding: 120px 11px 34px; position: relative; }
+        .frame-container > header { position: absolute; height: 50px; line-height: 50px; top: 69px; left: 11px; width: 320px; }
+        .frame-container > header h1 { height: 50px; line-height: 50px; text-align: center; color: #fff; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; font-size: 18px; font-weight: normal; }
+
+        /*.frame-container > header::before, .frame-container > header::after { height: 50px; line-height: 50px; width: 60px; background-repeat:no-repeat;}
+        .frame-container > header::before { content: "返回"; text-align: right; float:left;background-position: -10px 50%;}
+        .frame-container > header::after { content: ""; float:right;background-position: -10px 50%;margin-left:-100%;}*/
+
+        .frame-container > header .back { float: left; height: 50px; line-height: 50px; vertical-align: top; color: #fff; text-decoration: none; margin-right: 10px; }
+        .frame-container > header .back::before { content: ""; width: 25px; height: 50px; float: left; background-position: -76px 50%; background-repeat: no-repeat; }
+        .frame-container > header .menu { height: 50px; float: right; width: 35px; background-position: -114px 50%; background-repeat: no-repeat; text-indent: -99em; overflow: hidden; margin-left: 10px; }
+
+        .frame-container iframe { height: 1008px; width: 640px; overflow: hidden; margin-left: -160px; margin-top: -252px; transform: scale(0.5); }
+
+        .qr-code { margin-top: 180px; }
+        .qr-code img { width: 180px; height: 180px; border: 1px solid #ccc; }
+
+        .qr-code .buttons { margin-top: 5px; }
+        .qr-code .buttons a { float: left; height: 30px; line-height: 30px; width: 80px; text-align: center; color: #fff; text-decoration: none; color: #fff; font-size: 14px; background-color: #08a1ef; border-radius: 5px; }
+        .qr-code .buttons a::before { content: ""; display: inline-block; height: 30px; line-height: 30px; vertical-align: top; width: 15px; margin-right: 5px; }
+        .qr-code .buttons .edit::before { background-position: -158px 50%; background-repeat: no-repeat; }
+
+        .link { margin-top: 30px; }
+        .link p { font-size: 16px; margin-bottom: 10px; color: #fff; }
+        .link textarea { width: 182px; resize: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; height: 100px; }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="http://www.zol.com.cn" class="logo left">zol.com.cn</a>
+        <a href="http://h5x.zol.com.cn/H5-v4.0/html/list.php" class="back-to-list right">返回专题管理</a>
+    </header>
+    <section id="main">
+        <div class="frame-container left">
+            <header>
+                <a href="his" class="back">返回</a>
+                <span class="menu">菜单</span>
+                <h1></h1>
+            </header>
+            <iframe id="subjectFrame" src="" frameborder="0"></iframe>
+        </div>
+        <div class="qr-code right">
+            <img id="qrCode" src="http://h5x.zol.com.cn/H5-Admin/Ajax/Qrcode.php?ajax=1&url=" alt="" />
+            <div class="buttons">
+                <a href="http://h5x.zol.com.cn/H5-v4.0/html/create.html?sceneid_bigint=" class="edit">编辑</a>
+            </div>
+        </div>
+        <div class="link right">
+            <p>专题地址:</p>
+            <textarea id="subject-link" type="text" value=""></textarea>
+        </div>
+    </section>
+    <script src="http://h5x.zol.com.cn/H5-v4.0/js/sea.js"></script>
+    <script>
+        seajs.config({
+            base: "http://h5x.zol.com.cn/H5-v4.0/js/",
+            alias: {
+                "jquery": "jquery/jquery/1.10.1/jquery.js"
+            }
+        });
+    </script>
+    <script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.js"></script>
+    <script>
+        var subjectLink,
+            subjectId,
+            subjectFrame = document.getElementById('subjectFrame'),
+            qrCode = document.getElementById('qrCode'),
+            editLink = document.querySelector('.buttons > a'),
+            subjectAddress = document.getElementById('subject-link'),
+            h1 = document.querySelector('h1');
+
+        (subjectLink = /sub_link=(.*)/.exec(location.href)) && (subjectLink = subjectLink[1]);
+        (subjectId = subjectLink && /topic_file_(\d+)/.exec(subjectLink)) && (subjectId = subjectId[1]);
+
+        subjectAddress.value = subjectLink;
+
+        !/http:\/\//.test(subjectLink) && (subjectLink = 'http://h5x.zol.com.cn' + subjectLink);
+
+        if (!subjectId) {
+            //alert('参数错误，请重试~');
+            //location.href = subjectLink;
+        }
+        editLink && subjectId && (editLink.href += subjectId);
+        subjectFrame && (subjectFrame.src = subjectLink);
+        qrCode && (qrCode.src += subjectLink);
+
+        $.ajax({
+            url: 'http://zhangsj.h5.zol.com.cn/H5-API/AjaxTheme.php?action=getOneThemeDetail',
+            data: { sceneid_bigint: subjectId },
+            dataType: 'jsonp',
+            success: function (data) {
+                if (data.code == 200 && data.obj.basicThemedetail && data.obj.basicThemedetail.desc_varchar) {
+                    h1.html(data.obj.basicThemedetail.desc_varchar)
+                }
+            }
+        })
+
+    </script>
+</body>
+</html>

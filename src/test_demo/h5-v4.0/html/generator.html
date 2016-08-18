@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>发布</title>
+    <script>
+        if (/Android (d+.d+)/.test(navigator.userAgent)) {
+            var version = parseFloat(RegExp.$1);
+            if (version > 2.3) {
+                var phoneScale = parseInt(window.screen.width) / 640;
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            } else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script>
+    
+    <link rel="stylesheet" href="/H5-v4.0/css/app.css">
+    <link rel="stylesheet" href="/H5-v4.0/css/animate.css" />
+    <script>
+        window.wechatShareData = {
+            icon: '发布',
+            title: '发布'
+        }
+    </script>
+</head>
+<body>
+    <div id="viewport" class="flipview" data-loop="false">
+        <div class="container pa">
+            <div class="slide">
+                <table>
+                    <tbody>
+                        <tr>
+                            发布
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://icon.zol-img.com.cn/wap/js/z.min.js"></script>
+    <script src="/H5-v4.0/js/z.flipview.js"></script>
+    <script src="/H5-v4.0/js/app.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="http://icon.zol-img.com.cn/m/js/wechat-share.1.1.js"></script>
+</body>
+</html>

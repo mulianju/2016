@@ -1,0 +1,83 @@
+html{min-height:100%;position:relative;}
+body{padding-bottom:0;background-color:#e4e6e9;font-family:'Microsoft yahei';font-size:13px;color:#393939;min-height:100%}
+body:before{content:"";display:block;position:fixed;top:0;bottom:0;max-height:100%;min-height:100%;width:100%;z-index:-1;background-color:#FFF}
+a:hover{text-decoration: none;}
+.form-search input, .form-inline input, .form-horizontal input, .form-search textarea, .form-inline textarea, .form-horizontal textarea, .form-search select, .form-inline select, .form-horizontal select, .form-search .help-inline, .form-inline .help-inline, .form-horizontal .help-inline, .form-search .uneditable-input, .form-inline .uneditable-input, .form-horizontal .uneditable-input, .form-search .input-prepend, .form-inline .input-prepend, .form-horizontal .input-prepend, .form-search .input-append, .form-inline .input-append, .form-horizontal .input-append {
+  display: inline-block;  margin-bottom: 0;  vertical-align: middle;}
+textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -moz-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+  -webkit-transition: border linear .2s,box-shadow linear .2s;
+  -moz-transition: border linear .2s,box-shadow linear .2s;
+  -o-transition: border linear .2s,box-shadow linear .2s;
+  transition: border linear .2s,box-shadow linear .2s;
+}
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  display: inline-block;width: 60%;
+  padding: 4px 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #555;
+  vertical-align: middle;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+#main-container{padding:0;position:relative}
+.navbar{margin-bottom:0;border-radius: 0}
+.navbar-inverse .navbar-inner{border:0;box-shadow:none;border-radius:0;margin:7px 0 0;position:relative;}
+.navbar-inverse{padding-left:0;padding-right:0;margin-left:0;margin-right:0}
+.navbar-inverse .brand,.navbar-inverse .navbar-text,.navbar-inverse .navbar-link,.navbar-inverse .brand,.navbar-inverse .nav>li>a{color:#FFF}
+.navbar-inverse .brand{font-size:24px}
+.login-info{float: right;font:14px/30px 'Microsoft yahei';color: #fff;}
+.login-info i{font-style: normal;color: #07A0EE}
+.navbar h2{display: inline-block;font-size: 20px;line-height: 30px;color: #fff;margin: 0}
+#sidebar:before{content:"";display:block;width:190px;position:fixed;bottom:0;top:0;z-index:-1;background-color:#EFF3F3}
+#sidebar{width:190px;position:absolute;margin-left:0;margin-top:0;padding-top: 20px;}
+.list-group{margin: 0 10px 20px;text-align: center;}
+.list-group-title{background:#75828E!important;color: #fff!important;font-weight: 800;cursor: pointer;}
+.list-group-title a{color: #fff;}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover{border-color: #ddd;background: #fff;font-weight: 800;color: #07A1EF}
+.list-group.active > a{display: none}
+
+#main-content{margin:0 20px}
+
+
+#breadcrumbs{position:relative;z-index:13;border-bottom:1px solid #e5e5e5;background-color:#f5f5f5;min-height:40px;line-height:39px;padding:0 12px 0 0;display:block}
+.breadcrumb{background-color:transparent;display:inline-block;line-height:24px;margin:0 22px 0 12px;padding:0;font-size:13px;color:#333;border-radius:0}
+.breadcrumb>li>a{display:inline-block;padding:0 4px;color:#4c8fbd}
+.breadcrumb>li,.breadcrumb>.active{color:#555}
+.breadcrumb .icon-home{margin-left:4px;margin-right:2px;font-size:20px;position:relative;top:2px}
+.breadcrumb .icon-angle-right{height:22px;padding:0;margin:0;position:relative;top:1px;font-size:14px;color:#b2b6bf}
+.breadcrumb>li>.divider{padding:0 4px}
+
+
+.form-horizontal{margin: 30px 0;}
+.form-horizontal .control-group {margin-bottom: 20px;}
+.form-horizontal .controls {  margin-left: 180px;line-height: 34px;}
+.form-horizontal .control-label {  float: left;  width: 160px;  padding-top: 5px;  text-align: right;font-size: 16px;font-weight: 100}
+.form-horizontal select{width: 40%;}
+
+.form-search{width: 300px;float: right;}
+.table{margin-top: 20px}
+.upload{position: relative;float: left;margin-right: 10px;}
+.upload input[type="file"]{opacity: 0;width: 100%;height: 100%;z-index: 9;position: absolute;cursor: pointer;}
+.form-horizontal .controls em{font-style: normal;color: #07A1EF}
+#pic-group .pic{display: inline-block;width: 100px;height: 100px;margin:10px 10px 10px 0;background: url() 50% no-repeat;background-size: cover;position: relative;}
+#pic-group .delete{position: absolute;width: 20px;height: 20px;background: #f10;border-radius: 10px;bottom:5px;right: 5px;cursor: pointer;display: none}
+#pic-group .delete::before{content: '';width: 16px;height: 3px;background: #fff;position: absolute;left: 2px;top: 8px;}
+.controls::after{content: "";  display: table;  clear: both;}
+/***
+.table-row{display: -webkit-box;display: -moz-box;display: -webkit-flex;display: -ms-flexbox;display: flex;padding:10px 0;border-bottom:1px solid #dddddd;box-sizing: content-box;}
+.table-row > div{display:block;-webkit-flex: 1;flex: 1;-webkit-box-flex: 1;-moz-box-flex: 1;-ms-flex: 1;width: 100%;text-align:left;border:1px solid;}
+.table-header{font-weight:bold;height:35px;line-height:35px;box-sizing: content-box;margin-top: 20px;}
+***/
+
+.table-row{display: table-row;box-sizing: content-box;}
+.table-row > div{display:table-cell;text-align:left;border-bottom:1px solid #dddddd;padding:10px 0;}
+.table-header{font-weight:bold;height:35px;line-height:35px;box-sizing: content-box;margin-top: 20px;}
+.table-box{display:table;width:100%;}

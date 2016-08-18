@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理后台--元素管理</title>
+	<link rel="stylesheet" href="http://icon.zol-img.com.cn/bootstrap/bootstrap-3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div id="main-content">
+	<h2>添加元素</h2>
+	<form class="form-horizontal">
+	  <div class="control-group">
+	    <label class="control-label" for="modelname">选择元素</label>
+	    <div class="controls">
+	    	<div class="upload">
+	    		<input type="file">
+	      		<button type="button" class="btn btn-info">+ 上传元素</button>
+	    	</div>
+	       支持格式：<em>JPG、JPEG、PNG、GIF</em>      大小：<em>3M以内</em>
+	    </div>
+	    <div class="controls" id="pic-group">
+	    	<div class="pic"><span class="delete"></span></div>
+	  	</div>
+	  </div>
+
+	  <div class="control-group">
+	    <label class="control-label" for="modelurl">模板地址</label>
+	    <div class="controls">
+	      <input type="password" id="modelurl" placeholder="模板地址">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label" for="modeltypes">选择分类</label>
+	    <div class="controls">
+	      <select name="modeltypes" id="modeltypes">
+	      	<option value="1">活动报名</option>
+	      	<option value="2">邀请函</option>
+	      	<option value="3">新品推广</option>
+	      	<option value="4">活动总结</option>
+	      </select>
+	      <button type="button" class="btn btn-info">+ 添加分类</button>
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <div class="controls">
+	      <button type="submit" class="btn btn-primary" style="  width: 100px;">保存</button>
+	    </div>
+	  </div>
+	</form>
+
+	<h2>元素列表</h2>
+	
+	<table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>元素缩略图</th>
+          <th>分类</th>
+          <th>添加时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>人物</td>
+          <td>2015-12-01</td>
+          <td><a href="">删除</a></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>人物</td>
+          <td>2015-12-01</td>
+          <td><a href="">删除</a></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>人物</td>
+          <td>2015-12-01</td>
+          <td><a href="">删除</a></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>人物</td>
+          <td>2015-12-01</td>
+          <td><a href="">删除</a></td>
+        </tr>
+      </tbody>
+    </table>
+	<nav>
+	  <ul class="pagination">
+	    <li>
+	      <a href="#" aria-label="Previous">
+	        <span aria-hidden="true">&laquo;</span>
+	      </a>
+	    </li>
+	    <li><a href="#">1</a></li>
+	    <li><a href="#">2</a></li>
+	    <li><a href="#">3</a></li>
+	    <li><a href="#">4</a></li>
+	    <li><a href="#">5</a></li>
+	    <li>
+	      <a href="#" aria-label="Next">
+	        <span aria-hidden="true">&raquo;</span>
+	      </a>
+	    </li>
+	  </ul>
+	</nav>
+</div>
+</body>
+</html>

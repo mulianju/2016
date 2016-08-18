@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>管理后台--模板管理</title>
+	<link rel="stylesheet" href="http://icon.zol-img.com.cn/bootstrap/bootstrap-3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div id="main-content">
+	<h2>添加整套模板</h2>
+	<form class="form-horizontal">
+	  <div class="control-group">
+	    <label class="control-label" for="modelname">模板名称</label>
+	    <div class="controls">
+	      <input type="text" id="modelname" placeholder="模板名称">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label" for="modelurl">模板地址</label>
+	    <div class="controls">
+	      <input type="password" id="modelurl" placeholder="模板地址">
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <label class="control-label" for="modeltypes">选择分类</label>
+	    <div class="controls">
+	      <select name="modeltypes" id="modeltypes">
+	      	<option value="1">活动报名</option>
+	      	<option value="2">邀请函</option>
+	      	<option value="3">新品推广</option>
+	      	<option value="4">活动总结</option>
+	      </select>
+	      <button type="button" class="btn btn-info">+ 添加分类</button>
+	    </div>
+	  </div>
+	  <div class="control-group">
+	    <div class="controls">
+	      <button type="submit" class="btn btn-primary" style="  width: 100px;">保存</button>
+	    </div>
+	  </div>
+	</form>
+
+	<form class="form-search input-group">
+	  <input type="text" class="form-control" placeholder="Search for...">
+	  <span class="input-group-btn">
+        <button class="btn btn-info" type="button">搜索</button>
+      </span>
+	</form>
+	<h2>整套模板列表</h2>
+	
+	<table class="table table-hover table-striped">
+      <thead>
+        <tr>
+          <th>序号</th>
+          <th>模板名称</th>
+          <th>地址</th>
+          <th>分类</th>
+          <th>添加时间</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>http://m.zol.com.cn/app/168.html</td>
+          <td>邀请函</td>
+          <td>2015-12-01</td>
+          <td><a href="">预览</a> | <a href="">修改</a> | <a href="">删除</a></td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Mark</td>
+          <td>http://m.zol.com.cn/app/168.html</td>
+          <td>邀请函</td>
+          <td>2015-12-01</td>
+          <td><a href="">预览</a> | <a href="">修改</a> | <a href="">删除</a></td>
+        </tr>
+      </tbody>
+    </table>
+	<nav>
+	  <ul class="pagination">
+	    <li>
+	      <a href="#" aria-label="Previous">
+	        <span aria-hidden="true">&laquo;</span>
+	      </a>
+	    </li>
+	    <li><a href="#">1</a></li>
+	    <li><a href="#">2</a></li>
+	    <li><a href="#">3</a></li>
+	    <li><a href="#">4</a></li>
+	    <li><a href="#">5</a></li>
+	    <li>
+	      <a href="#" aria-label="Next">
+	        <span aria-hidden="true">&raquo;</span>
+	      </a>
+	    </li>
+	  </ul>
+	</nav>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理--菜单</title>
+	<link rel="stylesheet" href="http://icon.zol-img.com.cn/bootstrap/bootstrap-3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+<div id="sidebar">
+	<div class="list-group">
+		<div class="list-group-title list-group-item">模板管理</div>
+		<a href="admin-moban.html" class="list-group-item active" target="main">整套模板管理</a>
+		<a href="admin-mould.html" class="list-group-item" target="main">单页模板管理</a>
+	</div>
+	<div class="list-group">
+		<div class="list-group-title list-group-item">元素管理</div>
+		<a href="admin-bgs.html" class="list-group-item" target="main">背景图管理</a>
+		<a href="admin-sucai.html" class="list-group-item" target="main">素材库管理</a>
+	</div>
+	<div class="list-group">
+		<div class="list-group-title list-group-item"><a href="admin-user.html" target="main">用户管理</a></div>		
+	</div>
+</div>
+<script src="http://icon.zol-img.com.cn/js/jquery-1.9.1.min.js"></script>
+<script>
+	$('a').on('click',function (e) {
+		$('a').removeClass('active');
+		$(this).addClass('active')
+	})
+	$('.list-group-title').on('click', function(event) {
+		var _group = $(this).parent();
+		if(_group.hasClass('active')){
+			_group.removeClass('active')
+		}else{
+			_group.addClass('active')
+		}
+	});
+</script>	
+</body>
+</html>
