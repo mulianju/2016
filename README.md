@@ -8,3 +8,6 @@
 #         |-Static        // 存放非组件资源
 #         |-lib           // 存放不在npm上的第三方资源
 #         |-test_demo     // 自己练习的demo 暂存这里吧
+#
+#
+#     www.eyezip.com 前端俱乐部 欢迎各路朋友来交流
